@@ -3,7 +3,7 @@
 namespace TatTran\PaymentVNPAY\Model;
 
 use Magento\Payment\Model\Method\AbstractMethod;
-use TatTran\PaymentVNPAY\Model\ResourceModel\VNPAY as ResourceModel;
+use TatTran\PaymentVNPAY\Model\ResourceModel\tattranvnpay as ResourceModel;
 
 class tattranvnpay extends AbstractMethod
 {

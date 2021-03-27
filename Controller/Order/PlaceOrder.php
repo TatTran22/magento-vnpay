@@ -4,21 +4,24 @@
 namespace TatTran\PaymentVNPAY\Controller\Order;
 
 
+use Magento\Checkout\Model\Session;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Sales\Model\Order;
 
 class PlaceOrder extends Action {
 
-    /** @var  \Magento\Sales\Model\Order */
+    /** @var  Order */
     protected $order;
 
-    /** @var  \Magento\Checkout\Model\Session */
+    /** @var  Session */
     protected $checkoutSession;
 
-    /** @var  \Magento\Framework\App\Config\ScopeConfigInterface */
+    /** @var  ScopeConfigInterface */
     protected $scopeConfig;
 
-    public function __construct(Context $context, \Magento\Sales\Model\Order $order, \Magento\Checkout\Model\Session $checkoutSession, \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+    public function __construct(Context $context, Order $order, Session $checkoutSession, ScopeConfigInterface $scopeConfig
     ) {
         parent::__construct($context);
         $this->order = $order;
